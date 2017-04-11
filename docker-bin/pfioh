@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-G_CONTAINER="fnndsc/pman"
+G_CONTAINER="ldunphy/pman"
 
 G_SYNOPSIS="
 
