@@ -20,7 +20,7 @@ MAINTAINER fnndsc "dev@babymri.org"
 RUN apt-get update \
   && apt-get install -y libssl-dev libcurl4-openssl-dev bsdmainutils \
   && pip3 install pman==0.12.7 \
-  && apt-get install docker
+  && apt-get install docker.ce
 
 COPY ./docker-bin/pfioh /usr/bin/docker-bin/pfioh
 ENTRYPOINT ["/usr/bin/docker-bin/pfioh", "--forever"]
