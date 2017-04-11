@@ -7,7 +7,7 @@
 #                        dev@babyMRI.org
 #
 
-import sys, os
+import sys, os, argparse
 from    argparse import RawTextHelpFormatter
 from    argparse import ArgumentParser
 import  socket
@@ -17,7 +17,7 @@ str_version = "0.13.1"
 
 sys.path.insert(1, os.path.join(os.path.dirname(__file__), '..'))
 
-str_defIP = [l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][:1], [[(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) if l][0][0]
+# str_defIP = [l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][:1], [[(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) if l][0][0]
 
 str_desc = """
         __ _       _
@@ -51,7 +51,7 @@ parser.add_argument(
     '--ip',
     action  = 'store',
     dest    = 'ip',
-    default = str_defIP,
+    default = '0.0.0.0',
     help    = 'IP to connect.'
 )
 parser.add_argument(
@@ -114,6 +114,7 @@ if args.b_test:
     sys.exit(0)
 
 if args.b_forever and not args.b_test:
+    print("HEY")
     server.serve_forever()
 else:
     server.handle_request()
