@@ -21,6 +21,6 @@ RUN apt-get update \
   && apt-get install -y libssl-dev libcurl4-openssl-dev bsdmainutils \
   && pip3 install pman==0.12.7
 
-COPY ./docker-entrypoint.py /root/docker-entrypoint.py
-ENTRYPOINT ["/root/docker-entrypoint.py", "--forever"]
+COPY ./docker-entrypoint.py /usr/bin/docker-entrypoint.py
+ENTRYPOINT ["/usr/bin/docker-entrypoint.py", "--forever"]
 EXPOSE 5055
