@@ -22,5 +22,5 @@ RUN apt-get update \
   && pip3 install pman==0.12.7
 
 COPY ./docker-entrypoint.py /root/docker-entrypoint.py
-ENTRYPOINT ["/root/docker-entrypoint.py"]
+ENTRYPOINT ["/root/docker-entrypoint.py", "--forever"]
 EXPOSE 5055
