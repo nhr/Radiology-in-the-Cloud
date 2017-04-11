@@ -102,7 +102,7 @@ class pman(object):
         # Comms
         self.str_protocol       = "tcp"
         self.str_IP             = "127.0.0.1"
-        self.str_port           = "5055"
+        self.str_port           = "5010"
         self.router_raw         = 0
         self.listeners          = 1
         self.b_http             = False
@@ -165,7 +165,7 @@ class pman(object):
                 ./pman.py   --raw 1                 \\
                             --http                  \\
                             --ip <someIP>           \\
-                            --port 5055           \\
+                            --port 5010             \\
                             --listeners <listeners>
 
         """)

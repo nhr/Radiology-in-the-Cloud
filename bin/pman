@@ -26,7 +26,7 @@ parser.add_argument(
     '--port',
     action  = 'store',
     dest    = 'port',
-    default = '5055',
+    default = '5010',
     help    = 'Port to use.'
 )
 parser.add_argument(
@@ -107,7 +107,7 @@ print('pman started successfully.')
 # request, i.e.
 # purl    --content-type application/vnd.collection+json      \
 #         --verb POST                                         \
-#         --rawmode --http 192.168.1.189:5055/api/v1/cmd      \
+#         --rawmode --http 192.168.1.189:5010/api/v1/cmd      \
 #         --jsonwrapper 'payload'                             \
 #         --msg '{    "action": "quit",
 #                     "meta": {
