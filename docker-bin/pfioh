@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-G_CONTAINER="ldunphy/pman"
+G_CONTAINER="ldunphy/pfioh"
 
 G_SYNOPSIS="
 
