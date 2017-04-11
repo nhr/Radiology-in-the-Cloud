@@ -19,9 +19,9 @@ MAINTAINER fnndsc "dev@babymri.org"
 
 RUN apt-get update \
   && apt-get install -y libssl-dev libcurl4-openssl-dev bsdmainutils \
-  && pip3 install pman==0.12.7 \
-  && apt-get install docker-ce
+  && pip3 install pfioh==0.13.1
 
-COPY ./docker-bin/pfioh /usr/bin/docker-bin/pfioh
-ENTRYPOINT ["/usr/bin/docker-bin/pfioh", "--forever"]
+COPY ./docker-entrypoint.py /dock/docker-entrypoint.py
+RUN chmod 777 /dock && chmod 777 /dock/docker-entrypoint.py
+ENTRYPOINT ["/dock/docker-entrypoint.py"]
 EXPOSE 5055
