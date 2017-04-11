@@ -142,7 +142,7 @@ and then run
 
 .. code-block:: bash
 
-    docker run --name pman -v /home:/Users --rm -ti fnndsc/pman pman --rawmode 1 --http --port 5010 --listeners 12
+    docker run --name pman -v /home:/Users --rm -ti fnndsc/pman pman --rawmode 1 --http --port 5055 --listeners 12
 
 *****
 Usage

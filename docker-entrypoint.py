@@ -56,11 +56,8 @@ def http_construct(args, unknown):
 
     if not b_httpSpecd:
         str_serverIP  = "172.17.0.2"
-        str_serverPort  = '5010'
+        str_serverPort  = '5055'
         try:
-            if args.b_pman:
-                str_serverIP    = os.environ['PMAN_PORT_5010_TCP_ADDR']
-                str_serverPort  = os.environ['PMAN_PORT_5010_TCP_PORT']
             if args.b_pfioh:
                 str_serverIP    = os.environ['PFIOH_PORT_5055_TCP_ADDR']
                 str_serverPort  = os.environ['PFIOH_PORT_5055_TCP_PORT']

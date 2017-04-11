@@ -23,4 +23,4 @@ RUN apt-get update \
 
 COPY ./docker-entrypoint.py /root/docker-entrypoint.py
 ENTRYPOINT ["/root/docker-entrypoint.py"]
-EXPOSE 5010 5055
+EXPOSE 5055
