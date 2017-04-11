@@ -106,7 +106,7 @@ parser  = argparse.ArgumentParser(description = str_desc)
 parser.add_argument(
     'app',
     nargs   = '?',
-    default = 'pman'
+    default = 'pfioh'
 )
 parser.add_argument(
     '--pman',
